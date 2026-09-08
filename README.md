@@ -2,7 +2,7 @@
 #solar-tool, #solar-tool * { box-sizing: border-box; }
     #solar-tool {
       --green: #c5f90b; --dark: #172019; --muted: #657067; --line: #dfe5df;
-      width: min(1880px, 96vw);
+      width: min(1980px, 99vw);
       max-width: none;
       position: relative;
       left: 50%;
@@ -18,10 +18,11 @@
     #solar-tool .ms-intro { min-height:0; margin:0 0 8px; color:var(--muted); line-height:1.25; }
     #solar-tool label { display:block; margin: 0 0 7px; font-size:.94rem; font-weight:700; }
     #solar-tool input, #solar-tool select { width:100%; min-height:38px; padding:7px 10px; border:1px solid #bcc6bd; border-radius:10px; background:#fff; color:var(--dark); font-size:1rem; }
-    #solar-tool .ms-card:first-child .ms-fields { grid-template-columns:minmax(220px,1.08fr) minmax(190px,.92fr); }
+    #solar-tool .ms-card:first-child .ms-fields { grid-template-columns:minmax(290px,1.25fr) minmax(190px,.75fr); }
     #solar-tool .ms-first-layout { display:grid; grid-template-columns:minmax(0,1.15fr) minmax(250px,.85fr); gap:12px; align-items:end; }
     #solar-tool .ms-first-layout .ms-result { margin-top:0; }
     #solar-tool input:focus, #solar-tool select:focus { outline:3px solid rgba(197,249,11,.35); border-color:#718d08; }
+    #solar-tool #ms-period { font-size:.96rem; padding-right:34px; }
     #solar-tool .ms-fields { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
     #solar-tool .ms-field-wide { grid-column:1/-1; }
     #solar-tool .ms-result { margin-top:8px; padding:10px 12px; border-radius:14px; background:var(--dark); color:#fff; }
@@ -39,7 +40,7 @@
     #solar-tool canvas { display:block; width:100%; height:100px; border-radius:10px; background:#fafcf9; }
     #solar-tool .ms-note { margin:6px 0 0; color:var(--muted); font-size:.78rem; line-height:1.45; }
 
-    @media (max-width: 1100px) {
+    @media (max-width: 1180px) {
       #solar-tool {
         width: calc(100vw - 16px);
       }
@@ -90,7 +91,6 @@
           <p id="ms-required-detail">Soit environ 12 panneaux de 450 Wc.</p>
         </div>
       </div>
-      <p class="ms-note">Estimation basée sur 4 kWh produits quotidiennement par kWc installé. Le dimensionnement définitif dépend du lieu, de l’orientation, des ombrages, des pertes et du profil réel de consommation.</p>
     </article>
 
     <article class="ms-card">
@@ -120,7 +120,6 @@
         <div class="ms-chart-wrap"><h3 class="ms-chart-title">Production moyenne au cours d’une journée</h3><canvas id="ms-day-chart" width="560" height="100" role="img" aria-label="Graphique de production solaire journalière"></canvas></div>
         <div class="ms-chart-wrap"><h3 class="ms-chart-title">Production estimée par mois</h3><canvas id="ms-year-chart" width="560" height="100" role="img" aria-label="Graphique de production solaire annuelle"></canvas></div>
       </div>
-      <p class="ms-note">Courbes indicatives calculées avec une moyenne annuelle de 4 kWh/kWc/jour. La météo et les conditions réelles peuvent faire varier la production.</p>
     </article>
   </div>
 </section>
