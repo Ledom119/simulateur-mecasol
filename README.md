@@ -1,13 +1,5 @@
-# simulateur-mecasol
-Simulateur pv site Meca-Sol
-
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simulateur solaire Sénégal</title>
-  <style>
-    #mecasol-simulator, #mecasol-simulator * { box-sizing: border-box; }
+<style>
+#mecasol-simulator, #mecasol-simulator * { box-sizing: border-box; }
     #mecasol-simulator {
       --green: #c5f90b; --dark: #172019; --muted: #657067; --line: #dfe5df;
       max-width: 1500px; margin: 30px auto; padding: 10px;
@@ -46,9 +38,8 @@ Simulateur pv site Meca-Sol
       #mecasol-simulator .ms-card:first-child .ms-fields { grid-template-columns:1fr; }
       #mecasol-simulator .ms-field-wide { grid-column:auto; }
     }
-  </style>
-</head>
-<body>
+</style>
+
 <section id="mecasol-simulator" aria-label="Simulateur solaire pour le Sénégal">
   <div class="ms-grid">
     <article class="ms-card">
@@ -153,6 +144,4 @@ Simulateur pv site Meca-Sol
   window.addEventListener('resize',updateProduction);updateRequired();updateProduction();
 })();
 </script>
-</body>
-</html>
 
