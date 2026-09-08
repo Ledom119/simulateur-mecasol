@@ -11,10 +11,10 @@ Simulateur pv site Meca-Sol
     #mecasol-simulator, #mecasol-simulator * { box-sizing: border-box; }
     #mecasol-simulator {
       --green: #c5f90b; --dark: #172019; --muted: #657067; --line: #dfe5df;
-      max-width: 1340px; margin: 30px auto; padding: 10px;
+      max-width: 1500px; margin: 30px auto; padding: 10px;
       font-family: Arial, Helvetica, sans-serif; color: var(--dark);
     }
-    #mecasol-simulator .ms-grid { display: grid; grid-template-columns: minmax(0,1.12fr) minmax(0,.88fr); gap: 24px; align-items: stretch; }
+    #mecasol-simulator .ms-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 24px; align-items: stretch; }
     #mecasol-simulator .ms-card { border: 1px solid var(--line); border-radius: 18px; padding: 28px; background: #fff; box-shadow: 0 12px 35px rgba(20,35,23,.08); }
     #mecasol-simulator .ms-number { display:inline-grid; place-items:center; width:36px; height:36px; margin-bottom:16px; border-radius:50%; background:var(--green); font-weight:800; }
     #mecasol-simulator h2 { margin: 0 0 8px; font-size: clamp(1.35rem,2vw,1.8rem); line-height:1.2; }
