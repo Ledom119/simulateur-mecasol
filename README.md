@@ -38,7 +38,6 @@
     #solar-tool .ms-charts { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:8px; }
     #solar-tool .ms-chart-title { margin:0 0 5px; font-size:.88rem; }
     #solar-tool canvas { display:block; width:100%; height:100px; border-radius:10px; background:#fafcf9; }
-    #solar-tool .ms-note { margin:6px 0 0; color:var(--muted); font-size:.78rem; line-height:1.45; }
 
     @media (max-width: 1180px) {
       #solar-tool {
@@ -166,7 +165,7 @@
     const factors=[1.05,1.08,1.12,1.08,0.98,0.88,0.82,0.90,0.98,1.02,1.03,1.06];
     const days=[31,28,31,30,31,30,31,31,30,31,30,31], weighted=factors.reduce((s,f,i)=>s+f*days[i],0);
     const months=factors.map((f,i)=>annual*f*days[i]/weighted);
-    drawBars(q('#ms-year-chart'),months,['Jan','Fév','Mar','Avr','Mai','Juin','Juil','Août','Sep','Oct','Nov','Déc'],'#172019');
+    drawBars(q('#ms-year-chart'),months,['J','F','M','A','M','J','J','A','S','O','N','D'],'#172019');
   }
   period.addEventListener('change',()=>{consumption.value=period.value==='annual'?7300:20;updateRequired();});
   consumption.addEventListener('input',updateRequired);panels.addEventListener('input',updateProduction);panelPower.addEventListener('change',updateProduction);
