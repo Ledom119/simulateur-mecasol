@@ -2,7 +2,7 @@
 #solar-tool, #solar-tool * { box-sizing: border-box; }
     #solar-tool {
       --green: #c5f90b; --dark: #172019; --muted: #657067; --line: #dfe5df;
-      width: min(1980px, 99vw);
+      width: min(1850px, 95vw);
       max-width: none;
       position: relative;
       left: 50%;
@@ -172,3 +172,4 @@
   window.addEventListener('resize',updateProduction);updateRequired();updateProduction();
 })();
 </script>
+
