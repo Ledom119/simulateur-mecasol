@@ -1,5 +1,6 @@
 # simulateur-mecasol
 Simulateur pv site Meca-Sol
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -10,16 +11,17 @@ Simulateur pv site Meca-Sol
     #mecasol-simulator, #mecasol-simulator * { box-sizing: border-box; }
     #mecasol-simulator {
       --green: #c5f90b; --dark: #172019; --muted: #657067; --line: #dfe5df;
-      max-width: 1240px; margin: 30px auto; padding: 10px;
+      max-width: 1340px; margin: 30px auto; padding: 10px;
       font-family: Arial, Helvetica, sans-serif; color: var(--dark);
     }
-    #mecasol-simulator .ms-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 24px; align-items: stretch; }
+    #mecasol-simulator .ms-grid { display: grid; grid-template-columns: minmax(0,1.12fr) minmax(0,.88fr); gap: 24px; align-items: stretch; }
     #mecasol-simulator .ms-card { border: 1px solid var(--line); border-radius: 18px; padding: 28px; background: #fff; box-shadow: 0 12px 35px rgba(20,35,23,.08); }
     #mecasol-simulator .ms-number { display:inline-grid; place-items:center; width:36px; height:36px; margin-bottom:16px; border-radius:50%; background:var(--green); font-weight:800; }
     #mecasol-simulator h2 { margin: 0 0 8px; font-size: clamp(1.35rem,2vw,1.8rem); line-height:1.2; }
     #mecasol-simulator .ms-intro { min-height: 48px; margin:0 0 22px; color:var(--muted); line-height:1.5; }
     #mecasol-simulator label { display:block; margin: 0 0 7px; font-size:.94rem; font-weight:700; }
     #mecasol-simulator input, #mecasol-simulator select { width:100%; min-height:48px; padding:11px 13px; border:1px solid #bcc6bd; border-radius:10px; background:#fff; color:var(--dark); font-size:1rem; }
+    #mecasol-simulator .ms-card:first-child .ms-fields { grid-template-columns:minmax(220px,1.08fr) minmax(190px,.92fr); }
     #mecasol-simulator input:focus, #mecasol-simulator select:focus { outline:3px solid rgba(197,249,11,.35); border-color:#718d08; }
     #mecasol-simulator .ms-fields { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
     #mecasol-simulator .ms-field-wide { grid-column:1/-1; }
@@ -41,7 +43,8 @@ Simulateur pv site Meca-Sol
       #mecasol-simulator .ms-intro { min-height:0; }
     }
     @media (max-width: 430px) {
-      #mecasol-simulator .ms-fields { grid-template-columns:1fr; }
+      #mecasol-simulator .ms-fields,
+      #mecasol-simulator .ms-card:first-child .ms-fields { grid-template-columns:1fr; }
       #mecasol-simulator .ms-field-wide { grid-column:auto; }
     }
   </style>
