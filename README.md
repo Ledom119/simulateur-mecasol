@@ -1,46 +1,46 @@
 <style>
-#mecasol-simulator, #mecasol-simulator * { box-sizing: border-box; }
-    #mecasol-simulator {
+#solar-tool, #solar-tool * { box-sizing: border-box; }
+    #solar-tool {
       --green: #c5f90b; --dark: #172019; --muted: #657067; --line: #dfe5df;
       max-width: 1500px; margin: 30px auto; padding: 10px;
       font-family: Arial, Helvetica, sans-serif; color: var(--dark);
     }
-    #mecasol-simulator .ms-grid { display:grid; grid-template-columns:1fr 1fr; gap:24px; align-items:stretch; }
-    #mecasol-simulator .ms-card { width:100%; min-width:0; border: 1px solid var(--line); border-radius: 18px; padding: 28px; background: #fff; box-shadow: 0 12px 35px rgba(20,35,23,.08); }
-    #mecasol-simulator .ms-number { display:inline-grid; place-items:center; width:36px; height:36px; margin-bottom:16px; border-radius:50%; background:var(--green); font-weight:800; }
-    #mecasol-simulator h2 { margin: 0 0 8px; font-size: clamp(1.35rem,2vw,1.8rem); line-height:1.2; }
-    #mecasol-simulator .ms-intro { min-height: 48px; margin:0 0 22px; color:var(--muted); line-height:1.5; }
-    #mecasol-simulator label { display:block; margin: 0 0 7px; font-size:.94rem; font-weight:700; }
-    #mecasol-simulator input, #mecasol-simulator select { width:100%; min-height:48px; padding:11px 13px; border:1px solid #bcc6bd; border-radius:10px; background:#fff; color:var(--dark); font-size:1rem; }
-    #mecasol-simulator .ms-card:first-child .ms-fields { grid-template-columns:minmax(220px,1.08fr) minmax(190px,.92fr); }
-    #mecasol-simulator input:focus, #mecasol-simulator select:focus { outline:3px solid rgba(197,249,11,.35); border-color:#718d08; }
-    #mecasol-simulator .ms-fields { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
-    #mecasol-simulator .ms-field-wide { grid-column:1/-1; }
-    #mecasol-simulator .ms-result { margin-top:20px; padding:20px; border-radius:14px; background:var(--dark); color:#fff; }
-    #mecasol-simulator .ms-result small { display:block; color:#cfd6d0; font-size:.82rem; }
-    #mecasol-simulator .ms-result strong { display:block; margin:4px 0; color:var(--green); font-size:clamp(2rem,4vw,3rem); line-height:1; }
-    #mecasol-simulator .ms-result p { margin:8px 0 0; line-height:1.45; }
-    #mecasol-simulator .ms-stats { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-top:20px; }
-    #mecasol-simulator .ms-stat { padding:13px 8px; border-radius:10px; background:#f2f5f2; text-align:center; }
-    #mecasol-simulator .ms-stat strong { display:block; font-size:1.1rem; }
-    #mecasol-simulator .ms-stat span { color:var(--muted); font-size:.76rem; }
-    #mecasol-simulator .ms-chart-wrap { margin-top:22px; }
-    #mecasol-simulator .ms-chart-title { margin:0 0 8px; font-size:.95rem; }
-    #mecasol-simulator canvas { display:block; width:100%; height:190px; border-radius:10px; background:#fafcf9; }
-    #mecasol-simulator .ms-note { margin:16px 0 0; color:var(--muted); font-size:.78rem; line-height:1.45; }
+    #solar-tool .ms-grid { display:grid; grid-template-columns:1fr 1fr; gap:24px; align-items:stretch; }
+    #solar-tool .ms-card { width:100%; min-width:0; border: 1px solid var(--line); border-radius: 18px; padding: 28px; background: #fff; box-shadow: 0 12px 35px rgba(20,35,23,.08); }
+    #solar-tool .ms-number { display:inline-grid; place-items:center; width:36px; height:36px; margin-bottom:16px; border-radius:50%; background:var(--green); font-weight:800; }
+    #solar-tool h2 { margin: 0 0 8px; font-size: clamp(1.35rem,2vw,1.8rem); line-height:1.2; }
+    #solar-tool .ms-intro { min-height: 48px; margin:0 0 22px; color:var(--muted); line-height:1.5; }
+    #solar-tool label { display:block; margin: 0 0 7px; font-size:.94rem; font-weight:700; }
+    #solar-tool input, #solar-tool select { width:100%; min-height:48px; padding:11px 13px; border:1px solid #bcc6bd; border-radius:10px; background:#fff; color:var(--dark); font-size:1rem; }
+    #solar-tool .ms-card:first-child .ms-fields { grid-template-columns:minmax(220px,1.08fr) minmax(190px,.92fr); }
+    #solar-tool input:focus, #solar-tool select:focus { outline:3px solid rgba(197,249,11,.35); border-color:#718d08; }
+    #solar-tool .ms-fields { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+    #solar-tool .ms-field-wide { grid-column:1/-1; }
+    #solar-tool .ms-result { margin-top:20px; padding:20px; border-radius:14px; background:var(--dark); color:#fff; }
+    #solar-tool .ms-result small { display:block; color:#cfd6d0; font-size:.82rem; }
+    #solar-tool .ms-result strong { display:block; margin:4px 0; color:var(--green); font-size:clamp(2rem,4vw,3rem); line-height:1; }
+    #solar-tool .ms-result p { margin:8px 0 0; line-height:1.45; }
+    #solar-tool .ms-stats { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-top:20px; }
+    #solar-tool .ms-stat { padding:13px 8px; border-radius:10px; background:#f2f5f2; text-align:center; }
+    #solar-tool .ms-stat strong { display:block; font-size:1.1rem; }
+    #solar-tool .ms-stat span { color:var(--muted); font-size:.76rem; }
+    #solar-tool .ms-chart-wrap { margin-top:22px; }
+    #solar-tool .ms-chart-title { margin:0 0 8px; font-size:.95rem; }
+    #solar-tool canvas { display:block; width:100%; height:190px; border-radius:10px; background:#fafcf9; }
+    #solar-tool .ms-note { margin:16px 0 0; color:var(--muted); font-size:.78rem; line-height:1.45; }
     @media (max-width: 800px) {
-      #mecasol-simulator .ms-grid { grid-template-columns:1fr; }
-      #mecasol-simulator .ms-card { padding:22px 18px; }
-      #mecasol-simulator .ms-intro { min-height:0; }
+      #solar-tool .ms-grid { grid-template-columns:1fr; }
+      #solar-tool .ms-card { padding:22px 18px; }
+      #solar-tool .ms-intro { min-height:0; }
     }
     @media (max-width: 430px) {
-      #mecasol-simulator .ms-fields,
-      #mecasol-simulator .ms-card:first-child .ms-fields { grid-template-columns:1fr; }
-      #mecasol-simulator .ms-field-wide { grid-column:auto; }
+      #solar-tool .ms-fields,
+      #solar-tool .ms-card:first-child .ms-fields { grid-template-columns:1fr; }
+      #solar-tool .ms-field-wide { grid-column:auto; }
     }
 </style>
 
-<section id="mecasol-simulator" aria-label="Simulateur solaire pour le Sénégal">
+<section id="solar-tool" aria-label="Calcul solaire">
   <div class="ms-grid">
     <article class="ms-card">
       <span class="ms-number">1</span>
@@ -97,7 +97,7 @@
 
 <script>
 (function () {
-  const root = document.getElementById('mecasol-simulator');
+  const root = document.getElementById('solar-tool');
   if (!root) return;
   const q = s => root.querySelector(s);
   const fmt = (n, d=1) => new Intl.NumberFormat('fr-FR',{minimumFractionDigits:d,maximumFractionDigits:d}).format(n);
@@ -144,4 +144,3 @@
   window.addEventListener('resize',updateProduction);updateRequired();updateProduction();
 })();
 </script>
-
